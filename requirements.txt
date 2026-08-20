@@ -1,0 +1,15 @@
+# Core runtime for the WIO-ReefFish benchmark.
+# Install PyTorch first, matched to your CUDA version — see INSTALL.md.
+
+torch>=2.5
+torchvision>=0.20
+
+ultralytics>=8.4          # YOLOv8 / YOLO11 / YOLO26 / RT-DETR / YOLO-World
+transformers>=4.45        # Grounding DINO, DINOv2
+
+numpy>=1.26
+scipy>=1.11
+pyyaml>=6.0
+pillow>=10.0
+opencv-python-headless>=4.9
+matplotlib>=3.8

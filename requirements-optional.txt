@@ -1,0 +1,5 @@
+# Optional baselines. Each is only needed if you run that specific detector;
+# the rest of the benchmark works without them.
+
+super-gradients>=3.7                                  # yolo-nas
+sam2 @ git+https://github.com/facebookresearch/sam2.git   # sam2

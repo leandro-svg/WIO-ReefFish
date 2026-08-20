@@ -1,0 +1,35 @@
+[build-system]
+requires = ["setuptools>=68", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "wio-reeffish"
+version = "1.0.0"
+description = "Object detection benchmark for Western Indian Ocean reef fish"
+readme = "README.md"
+requires-python = ">=3.11"
+license = { text = "CC-BY-NC-4.0" }
+keywords = ["object-detection", "marine-ecology", "coral-reef", "fish", "benchmark"]
+
+dependencies = [
+    "torch>=2.5",
+    "torchvision>=0.20",
+    "ultralytics>=8.4",
+    "transformers>=4.45",
+    "numpy>=1.26",
+    "scipy>=1.11",
+    "pyyaml>=6.0",
+    "pillow>=10.0",
+    "opencv-python-headless>=4.9",
+    "matplotlib>=3.8",
+]
+
+[project.optional-dependencies]
+yolo-nas = ["super-gradients>=3.7"]
+
+[project.scripts]
+fish-monitoring = "fish_monitoring.cli:main"
+
+[tool.setuptools.packages.find]
+where = ["src"]
+include = ["fish_monitoring*"]
